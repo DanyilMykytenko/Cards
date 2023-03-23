@@ -1,0 +1,13 @@
+﻿@model UsersModel
+
+<ul>
+    @foreach (var user in Model.Users)
+    {
+        <li>@user.UserName</li>
+        <li>
+
+            <a href="getuser/@user.UserName">Modify User</a>
+
+        </li>
+    }
+</ul>

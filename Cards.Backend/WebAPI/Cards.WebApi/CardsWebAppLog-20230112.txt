@@ -1,0 +1,610 @@
+2023-01-12 17:18:39.837 +02:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-12 17:18:39.975 +02:00 [INF] Executed DbCommand (82ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-01-12 17:18:40.086 +02:00 [INF] User profile is available. Using 'C:\Users\freez\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-12 17:18:40.409 +02:00 [INF] Now listening on: https://localhost:7112
+2023-01-12 17:18:40.409 +02:00 [INF] Now listening on: http://localhost:5088
+2023-01-12 17:18:41.391 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/ - -
+2023-01-12 17:18:41.515 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/ - - - 301 0 - 129.4392ms
+2023-01-12 17:18:41.524 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/index.html - -
+2023-01-12 17:18:41.754 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/index.html - - - 200 - text/html;charset=utf-8 229.7403ms
+2023-01-12 17:18:41.773 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/swagger-ui.css - -
+2023-01-12 17:18:41.773 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/swagger-ui-bundle.js - -
+2023-01-12 17:18:41.774 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/swagger-ui-standalone-preset.js - -
+2023-01-12 17:18:41.774 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/_framework/aspnetcore-browser-refresh.js - -
+2023-01-12 17:18:41.774 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/_vs/browserLink - -
+2023-01-12 17:18:41.778 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 4.6812ms
+2023-01-12 17:18:41.840 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-01-12 17:18:41.840 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-01-12 17:18:41.840 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/swagger-ui-standalone-preset.js - - - 200 339486 application/javascript 66.1710ms
+2023-01-12 17:18:41.840 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/swagger-ui.css - - - 200 143943 text/css 66.8242ms
+2023-01-12 17:18:41.851 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-12 17:18:41.852 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/swagger-ui-bundle.js - - - 200 1096145 application/javascript 78.4312ms
+2023-01-12 17:18:41.890 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 115.9503ms
+2023-01-12 17:18:42.023 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/swagger/v1/swagger.json - -
+2023-01-12 17:18:42.064 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/favicon-32x32.png - -
+2023-01-12 17:18:42.065 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-01-12 17:18:42.065 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/favicon-32x32.png - - - 200 628 image/png 0.6398ms
+2023-01-12 17:18:42.201 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 177.8792ms
+2023-01-12 17:19:22.090 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:19:22.094 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:19:22.121 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:19:22.121 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:19:22.124 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 33.7954ms
+2023-01-12 17:19:22.124 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 32.2357ms
+2023-01-12 17:19:22.129 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:19:22.129 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:19:22.526 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-12 17:19:22.533 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-12 17:19:22.533 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 404.6157ms
+2023-01-12 17:19:22.535 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:19:22.535 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:19:22.541 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-12 17:19:22.541 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-12 17:19:22.541 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 6.5178ms
+2023-01-12 17:19:32.946 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:19:32.947 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:19:32.947 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:19:32.947 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:19:32.947 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.8455ms
+2023-01-12 17:19:32.947 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.1404ms
+2023-01-12 17:19:32.949 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:19:32.949 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:19:33.463 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:19:33.481 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:19:33.672 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 17:19:34.253 +02:00 [INF] Executed DbCommand (92ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 17:19:34.299 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 17:19:34.305 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:19:34.305 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:19:34.306 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:19:34.306 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:19:34.307 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 17:19:34.310 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 823.9358ms
+2023-01-12 17:19:34.311 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:19:34.323 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 1374.1998ms
+2023-01-12 17:19:34.368 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 17:19:34.368 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 17:19:34.369 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 62.4323ms
+2023-01-12 17:19:34.369 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:19:34.369 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 63.6090ms
+2023-01-12 17:19:37.217 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards/1491eb8e-048b-4b4d-9070-c4aef1ebdc39 - -
+2023-01-12 17:19:37.217 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:19:37.218 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards/1491eb8e-048b-4b4d-9070-c4aef1ebdc39 - - - 204 - - 0.2861ms
+2023-01-12 17:19:37.220 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7112/api/Cards/1491eb8e-048b-4b4d-9070-c4aef1ebdc39 - -
+2023-01-12 17:19:37.220 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:19:37.221 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Delete (Cards.WebApi)'
+2023-01-12 17:19:37.236 +02:00 [INF] Route matched with {action = "Delete", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(System.Guid) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:19:37.272 +02:00 [INF] Notes Request: DeleteCardCommand "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"Id":"1491eb8e-048b-4b4d-9070-c4aef1ebdc39","UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"DeleteCardCommand"}
+2023-01-12 17:19:37.360 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreationDate], [c].[Details], [c].[EditDate], [c].[Title], [c].[UserId]
+FROM [Cards] AS [c]
+WHERE [c].[Id] = @__get_Item_0
+2023-01-12 17:19:37.559 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cards]
+OUTPUT 1
+WHERE [Id] = @p0;
+2023-01-12 17:19:37.598 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-01-12 17:19:37.598 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Delete (Cards.WebApi) in 361.9222ms
+2023-01-12 17:19:37.598 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Delete (Cards.WebApi)'
+2023-01-12 17:19:37.598 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7112/api/Cards/1491eb8e-048b-4b4d-9070-c4aef1ebdc39 - - - 204 - - 378.5921ms
+2023-01-12 17:20:17.266 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:20:17.266 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:20:17.266 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:20:17.266 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:20:17.266 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.3191ms
+2023-01-12 17:20:17.266 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.2390ms
+2023-01-12 17:20:17.273 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:20:17.273 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:20:17.274 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:20:17.274 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:20:17.276 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 17:20:17.289 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 17:20:17.289 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 17:20:17.289 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 14.6655ms
+2023-01-12 17:20:17.289 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:20:17.289 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 16.1572ms
+2023-01-12 17:20:17.292 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:20:17.292 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:20:17.293 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:20:17.293 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:20:17.293 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 17:20:17.295 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 17:20:17.296 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 17:20:17.296 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 3.1775ms
+2023-01-12 17:20:17.296 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:20:17.296 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 3.9932ms
+2023-01-12 17:21:43.325 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:21:43.325 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:21:43.325 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.5182ms
+2023-01-12 17:21:43.333 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7112/api/Cards application/json 65
+2023-01-12 17:21:43.334 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:21:43.335 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 17:21:43.341 +02:00 [INF] Route matched with {action = "Update", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(Cards.WebApi.Models.UpdateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:21:43.396 +02:00 [INF] Notes Request: UpdateCardCommand "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","Id":"aab7cc75-1a4c-4435-9cce-aa99d777f347","Title":"Test45444","Details":null,"$type":"UpdateCardCommand"}
+2023-01-12 17:21:43.402 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreationDate], [c].[Details], [c].[EditDate], [c].[Title], [c].[UserId]
+FROM [Cards] AS [c]
+WHERE [c].[Id] = @__request_Id_0
+2023-01-12 17:21:43.423 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (Size = 250)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Cards] SET [EditDate] = @p0, [Title] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2023-01-12 17:21:43.425 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-01-12 17:21:43.425 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi) in 83.7851ms
+2023-01-12 17:21:43.425 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 17:21:43.425 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7112/api/Cards application/json 65 - 204 - - 92.2022ms
+2023-01-12 17:21:45.528 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:21:45.528 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:21:45.529 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:21:45.529 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:21:45.529 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 17:21:45.539 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 17:21:45.539 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 17:21:45.539 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 10.5998ms
+2023-01-12 17:21:45.539 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:21:45.539 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 11.2967ms
+2023-01-12 17:21:45.546 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:21:45.546 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:21:45.546 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:21:45.547 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:21:45.547 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 17:21:45.560 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 17:21:45.560 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 17:21:45.560 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 13.4658ms
+2023-01-12 17:21:45.560 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:21:45.560 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 14.6399ms
+2023-01-12 17:34:38.585 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:34:38.590 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:34:38.592 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 7.2592ms
+2023-01-12 17:34:38.594 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:34:38.594 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:34:38.594 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:34:38.594 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:34:38.594 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.4414ms
+2023-01-12 17:34:38.594 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-12 17:34:38.594 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-12 17:34:38.594 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 0.3393ms
+2023-01-12 17:34:38.600 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:34:38.600 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:34:38.600 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-12 17:34:38.600 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-12 17:34:38.600 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 0.3067ms
+2023-01-12 17:34:53.268 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:34:53.269 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:34:53.269 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:34:53.269 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:34:53.269 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 1.3828ms
+2023-01-12 17:34:53.269 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.6966ms
+2023-01-12 17:34:53.272 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:34:53.272 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:34:53.273 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:34:53.274 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:34:53.274 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 17:34:53.409 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 17:34:53.410 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 17:34:53.410 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 136.0032ms
+2023-01-12 17:34:53.410 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:34:53.410 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 138.4839ms
+2023-01-12 17:34:53.412 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:34:53.412 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:34:53.412 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:34:53.413 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:34:53.413 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 17:34:53.415 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 17:34:53.416 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 17:34:53.416 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 3.1075ms
+2023-01-12 17:34:53.416 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:34:53.416 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 4.0947ms
+2023-01-12 17:35:01.058 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:35:01.058 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:35:01.058 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.5100ms
+2023-01-12 17:35:01.061 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7112/api/Cards application/json 67
+2023-01-12 17:35:01.061 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:35:01.061 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 17:35:01.061 +02:00 [INF] Route matched with {action = "Update", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(Cards.WebApi.Models.UpdateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:35:01.063 +02:00 [INF] Notes Request: UpdateCardCommand "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","Id":"aab7cc75-1a4c-4435-9cce-aa99d777f347","Title":"Test4544432","Details":null,"$type":"UpdateCardCommand"}
+2023-01-12 17:35:01.067 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreationDate], [c].[Details], [c].[EditDate], [c].[Title], [c].[UserId]
+FROM [Cards] AS [c]
+WHERE [c].[Id] = @__request_Id_0
+2023-01-12 17:35:01.071 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (Size = 250)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Cards] SET [EditDate] = @p0, [Title] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2023-01-12 17:35:01.071 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-01-12 17:35:01.072 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi) in 10.0088ms
+2023-01-12 17:35:01.072 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 17:35:01.072 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7112/api/Cards application/json 67 - 204 - - 11.6633ms
+2023-01-12 17:35:03.207 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:35:03.208 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:35:03.208 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:35:03.208 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:35:03.208 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 17:35:03.210 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 17:35:03.211 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 17:35:03.211 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 3.3121ms
+2023-01-12 17:35:03.211 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:35:03.212 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 4.2571ms
+2023-01-12 17:35:03.213 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:35:03.213 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:35:03.214 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:35:03.214 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:35:03.214 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 17:35:03.217 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 17:35:03.217 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 17:35:03.218 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 3.5914ms
+2023-01-12 17:35:03.218 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:35:03.218 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 4.7017ms
+2023-01-12 17:38:03.312 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:38:03.315 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:38:03.315 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 8.1374ms
+2023-01-12 17:38:03.328 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7112/api/Cards application/json 67
+2023-01-12 17:38:03.329 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:38:03.329 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 17:38:03.329 +02:00 [INF] Route matched with {action = "Update", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(Cards.WebApi.Models.UpdateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:38:03.333 +02:00 [INF] Notes Request: UpdateCardCommand "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","Id":"aab7cc75-1a4c-4435-9cce-aa99d777f347","Title":"Test4544432","Details":null,"$type":"UpdateCardCommand"}
+2023-01-12 17:38:03.336 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreationDate], [c].[Details], [c].[EditDate], [c].[Title], [c].[UserId]
+FROM [Cards] AS [c]
+WHERE [c].[Id] = @__request_Id_0
+2023-01-12 17:38:03.338 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Cards] SET [EditDate] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2023-01-12 17:38:03.338 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-01-12 17:38:03.338 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi) in 8.918ms
+2023-01-12 17:38:03.338 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 17:38:03.339 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7112/api/Cards application/json 67 - 204 - - 10.2614ms
+2023-01-12 17:38:06.981 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7112/api/Cards application/json 67
+2023-01-12 17:38:06.982 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:38:06.983 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 17:38:06.983 +02:00 [INF] Route matched with {action = "Update", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(Cards.WebApi.Models.UpdateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:38:06.983 +02:00 [INF] Notes Request: UpdateCardCommand "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","Id":"aab7cc75-1a4c-4435-9cce-aa99d777f347","Title":"Test4544432","Details":null,"$type":"UpdateCardCommand"}
+2023-01-12 17:38:06.985 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreationDate], [c].[Details], [c].[EditDate], [c].[Title], [c].[UserId]
+FROM [Cards] AS [c]
+WHERE [c].[Id] = @__request_Id_0
+2023-01-12 17:38:06.987 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Cards] SET [EditDate] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2023-01-12 17:38:06.988 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-01-12 17:38:06.988 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi) in 4.9689ms
+2023-01-12 17:38:06.988 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 17:38:06.988 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7112/api/Cards application/json 67 - 204 - - 7.2158ms
+2023-01-12 17:38:10.750 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 17:38:10.750 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:38:10.750 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.3467ms
+2023-01-12 17:38:10.751 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7112/api/Cards application/json 15
+2023-01-12 17:38:10.752 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:38:10.752 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi)'
+2023-01-12 17:38:10.754 +02:00 [INF] Route matched with {action = "Create", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Cards.WebApi.Models.CreateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:38:10.777 +02:00 [INF] Notes Request: CreateCardCommand "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","Title":"das","Details":null,"$type":"CreateCardCommand"}
+2023-01-12 17:38:10.817 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 250), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cards] ([Id], [CreationDate], [Details], [EditDate], [Title], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-01-12 17:38:10.826 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-01-12 17:38:10.827 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi) in 72.6046ms
+2023-01-12 17:38:10.827 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi)'
+2023-01-12 17:38:10.827 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7112/api/Cards application/json 15 - 200 - application/json;+charset=utf-8 75.2825ms
+2023-01-12 17:38:11.254 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:38:11.254 +02:00 [INF] CORS policy execution successful.
+2023-01-12 17:38:11.255 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:38:11.255 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 17:38:11.255 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 17:38:11.259 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 17:38:11.259 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 17:38:11.259 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 4.2294ms
+2023-01-12 17:38:11.259 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 17:38:11.259 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 5.4833ms
+2023-01-12 17:39:32.378 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:39:32.388 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-12 17:39:32.388 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-12 17:39:32.389 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 12.7114ms
+2023-01-12 17:39:33.730 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 17:39:33.731 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-12 17:39:33.731 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-12 17:39:33.731 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 0.5635ms
+2023-01-12 21:18:36.365 +02:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-12 21:18:36.477 +02:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-01-12 21:18:36.691 +02:00 [INF] User profile is available. Using 'C:\Users\freez\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-12 21:18:36.904 +02:00 [INF] Now listening on: https://localhost:7112
+2023-01-12 21:18:36.904 +02:00 [INF] Now listening on: http://localhost:5088
+2023-01-12 21:18:38.441 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/index.html - -
+2023-01-12 21:18:39.545 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/index.html - - - 200 - text/html;charset=utf-8 1106.5702ms
+2023-01-12 21:18:39.606 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/_framework/aspnetcore-browser-refresh.js - -
+2023-01-12 21:18:39.610 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 4.0912ms
+2023-01-12 21:18:40.174 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/_vs/browserLink - -
+2023-01-12 21:18:40.213 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.8297ms
+2023-01-12 21:18:41.194 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/swagger/v1/swagger.json - -
+2023-01-12 21:18:41.447 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 252.7504ms
+2023-01-12 21:18:47.641 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 21:18:47.641 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 21:18:47.670 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:18:47.670 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:18:47.672 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 30.9599ms
+2023-01-12 21:18:47.672 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 30.9182ms
+2023-01-12 21:18:47.673 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 21:18:47.674 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:18:47.744 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-12 21:18:47.751 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-12 21:18:47.752 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 78.4426ms
+2023-01-12 21:18:47.753 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 21:18:47.753 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:18:47.755 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-12 21:18:47.755 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-12 21:18:47.755 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 2.2444ms
+2023-01-12 21:18:49.921 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 21:18:49.921 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:18:50.313 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 21:18:50.335 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 21:18:50.492 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 21:18:51.119 +02:00 [INF] Executed DbCommand (69ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 21:18:51.167 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 21:18:51.180 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 840.8759ms
+2023-01-12 21:18:51.181 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 21:18:51.191 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 0 - application/json;+charset=utf-8 1270.0901ms
+2023-01-12 21:18:51.543 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 21:18:51.543 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:18:51.544 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 21:18:51.544 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 21:18:51.545 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 21:18:51.616 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 21:18:51.617 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 21:18:51.617 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 73.215ms
+2023-01-12 21:18:51.617 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 21:18:51.617 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 74.7727ms
+2023-01-12 21:18:51.618 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 21:18:51.619 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:18:51.619 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 21:18:51.619 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 21:18:51.621 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 21:18:51.624 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 21:18:51.624 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 21:18:51.625 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 5.508ms
+2023-01-12 21:18:51.625 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 21:18:51.625 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 6.4317ms
+2023-01-12 21:18:57.710 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 21:18:57.710 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:18:57.710 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.2445ms
+2023-01-12 21:18:57.711 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7112/api/Cards application/json 16
+2023-01-12 21:18:57.711 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:18:57.711 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi)'
+2023-01-12 21:18:57.723 +02:00 [INF] Route matched with {action = "Create", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Cards.WebApi.Models.CreateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 21:18:57.791 +02:00 [INF] Notes Request: CreateCardCommand "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","Title":"aaaa","Details":null,"$type":"CreateCardCommand"}
+2023-01-12 21:18:57.986 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 250), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cards] ([Id], [CreationDate], [Details], [EditDate], [Title], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-01-12 21:18:58.009 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-01-12 21:18:58.010 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi) in 286.5449ms
+2023-01-12 21:18:58.010 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi)'
+2023-01-12 21:18:58.010 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7112/api/Cards application/json 16 - 200 - application/json;+charset=utf-8 299.0902ms
+2023-01-12 21:18:58.225 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 21:18:58.225 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:18:58.226 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 21:18:58.226 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 21:18:58.226 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 21:18:58.231 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 21:18:58.232 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 21:18:58.232 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 6.062ms
+2023-01-12 21:18:58.232 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 21:18:58.233 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 7.7648ms
+2023-01-12 21:18:59.246 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7112/api/Cards application/json 15
+2023-01-12 21:18:59.246 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:18:59.247 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi)'
+2023-01-12 21:18:59.247 +02:00 [INF] Route matched with {action = "Create", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Cards.WebApi.Models.CreateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 21:18:59.248 +02:00 [INF] Notes Request: CreateCardCommand "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","Title":"bbb","Details":null,"$type":"CreateCardCommand"}
+2023-01-12 21:18:59.251 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 250), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cards] ([Id], [CreationDate], [Details], [EditDate], [Title], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-01-12 21:18:59.252 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-01-12 21:18:59.252 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi) in 5.0656ms
+2023-01-12 21:18:59.252 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi)'
+2023-01-12 21:18:59.252 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7112/api/Cards application/json 15 - 200 - application/json;+charset=utf-8 5.9283ms
+2023-01-12 21:18:59.753 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 21:18:59.754 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:18:59.755 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 21:18:59.755 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 21:18:59.755 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 21:18:59.762 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 21:18:59.763 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 21:18:59.764 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 8.3151ms
+2023-01-12 21:18:59.764 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 21:18:59.767 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 11.3141ms
+2023-01-12 21:19:05.390 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 21:19:05.390 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:19:05.390 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.2391ms
+2023-01-12 21:19:05.391 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7112/api/Cards application/json 15
+2023-01-12 21:19:05.391 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:19:05.391 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi)'
+2023-01-12 21:19:05.391 +02:00 [INF] Route matched with {action = "Create", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Cards.WebApi.Models.CreateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 21:19:05.393 +02:00 [INF] Notes Request: CreateCardCommand "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","Title":"dbs","Details":null,"$type":"CreateCardCommand"}
+2023-01-12 21:19:05.395 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 250), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cards] ([Id], [CreationDate], [Details], [EditDate], [Title], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-01-12 21:19:05.395 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-01-12 21:19:05.395 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi) in 4.1504ms
+2023-01-12 21:19:05.395 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi)'
+2023-01-12 21:19:05.396 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7112/api/Cards application/json 15 - 200 - application/json;+charset=utf-8 4.7930ms
+2023-01-12 21:19:05.908 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-12 21:19:05.909 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:19:05.910 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 21:19:05.910 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 21:19:05.910 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-12 21:19:05.921 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-12 21:19:05.922 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-12 21:19:05.922 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 11.8677ms
+2023-01-12 21:19:05.922 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-12 21:19:05.922 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 14.0639ms
+2023-01-12 21:19:10.341 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 21:19:10.343 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:19:10.343 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 1.9646ms
+2023-01-12 21:19:10.345 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7112/api/Cards application/json 60
+2023-01-12 21:19:10.345 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:19:10.345 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 21:19:10.352 +02:00 [INF] Route matched with {action = "Update", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(Cards.WebApi.Models.UpdateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 21:19:10.380 +02:00 [INF] Notes Request: UpdateCardCommand "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","Id":"29610fa5-2825-4dda-aef1-962b48e3747e","Title":"aaaa","Details":null,"$type":"UpdateCardCommand"}
+2023-01-12 21:19:10.417 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreationDate], [c].[Details], [c].[EditDate], [c].[Title], [c].[UserId]
+FROM [Cards] AS [c]
+WHERE [c].[Id] = @__request_Id_0
+2023-01-12 21:19:10.439 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Cards] SET [EditDate] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2023-01-12 21:19:10.455 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-01-12 21:19:10.455 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi) in 102.4751ms
+2023-01-12 21:19:10.455 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 21:19:10.455 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7112/api/Cards application/json 60 - 204 - - 110.3117ms
+2023-01-12 21:21:57.764 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-12 21:21:57.768 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:21:57.768 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 4.1731ms
+2023-01-12 21:21:57.803 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7112/api/Cards application/json 60
+2023-01-12 21:21:57.803 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:21:57.804 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 21:21:57.804 +02:00 [INF] Route matched with {action = "Update", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(Cards.WebApi.Models.UpdateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 21:21:57.805 +02:00 [INF] Notes Request: UpdateCardCommand "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","Id":"29610fa5-2825-4dda-aef1-962b48e3747e","Title":"aaaa","Details":null,"$type":"UpdateCardCommand"}
+2023-01-12 21:21:57.817 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@__request_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreationDate], [c].[Details], [c].[EditDate], [c].[Title], [c].[UserId]
+FROM [Cards] AS [c]
+WHERE [c].[Id] = @__request_Id_0
+2023-01-12 21:21:57.825 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Cards] SET [EditDate] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2023-01-12 21:21:57.826 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-01-12 21:21:57.826 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi) in 21.4736ms
+2023-01-12 21:21:57.826 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 21:21:57.826 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7112/api/Cards application/json 60 - 204 - - 22.7247ms
+2023-01-12 21:21:58.382 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7112/api/Cards application/json 60
+2023-01-12 21:21:58.382 +02:00 [INF] CORS policy execution successful.
+2023-01-12 21:21:58.407 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 21:21:58.407 +02:00 [INF] Route matched with {action = "Update", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(Cards.WebApi.Models.UpdateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-12 21:21:58.410 +02:00 [INF] Notes Request: UpdateCardCommand "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","Id":"29610fa5-2825-4dda-aef1-962b48e3747e","Title":"aaaa","Details":null,"$type":"UpdateCardCommand"}
+2023-01-12 21:21:58.416 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreationDate], [c].[Details], [c].[EditDate], [c].[Title], [c].[UserId]
+FROM [Cards] AS [c]
+WHERE [c].[Id] = @__request_Id_0
+2023-01-12 21:21:58.417 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Cards] SET [EditDate] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2023-01-12 21:21:58.417 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-01-12 21:21:58.417 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi) in 9.8655ms
+2023-01-12 21:21:58.417 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-12 21:21:58.417 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7112/api/Cards application/json 60 - 204 - - 35.4167ms

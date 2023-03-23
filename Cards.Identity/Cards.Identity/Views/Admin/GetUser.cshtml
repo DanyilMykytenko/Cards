@@ -1,0 +1,12 @@
+﻿@model AdminRolesModel
+
+<h3>@Model.User.UserName</h3>
+
+<ul>
+    @foreach (var role in Model.Roles)
+    {
+        <li>
+            @role.Name <input type="checkbox" checked="@Model.UserRoles.Contains(role.Name)">
+        </li>
+    }
+</ul>

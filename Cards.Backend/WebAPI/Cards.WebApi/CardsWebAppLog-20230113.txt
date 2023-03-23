@@ -1,0 +1,543 @@
+2023-01-13 11:04:11.650 +02:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-13 11:04:11.818 +02:00 [INF] Executed DbCommand (100ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-01-13 11:04:11.987 +02:00 [INF] User profile is available. Using 'C:\Users\freez\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-13 11:04:12.651 +02:00 [INF] Now listening on: https://localhost:7112
+2023-01-13 11:04:12.651 +02:00 [INF] Now listening on: http://localhost:5088
+2023-01-13 11:04:13.549 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/ - -
+2023-01-13 11:04:13.720 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/ - - - 301 0 - 175.3490ms
+2023-01-13 11:04:13.851 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/index.html - -
+2023-01-13 11:04:14.267 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/index.html - - - 200 - text/html;charset=utf-8 415.8106ms
+2023-01-13 11:04:14.295 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/swagger-ui-bundle.js - -
+2023-01-13 11:04:14.300 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/swagger-ui-standalone-preset.js - -
+2023-01-13 11:04:14.301 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/swagger-ui.css - -
+2023-01-13 11:04:14.301 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/_framework/aspnetcore-browser-refresh.js - -
+2023-01-13 11:04:14.305 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 4.3376ms
+2023-01-13 11:04:14.310 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/_vs/browserLink - -
+2023-01-13 11:04:14.400 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-01-13 11:04:14.432 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/swagger-ui.css - - - 200 143943 text/css 131.0117ms
+2023-01-13 11:04:14.443 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-01-13 11:04:14.443 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/swagger-ui-standalone-preset.js - - - 200 339486 application/javascript 142.7078ms
+2023-01-13 11:04:14.487 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-13 11:04:14.487 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/swagger-ui-bundle.js - - - 200 1096145 application/javascript 192.2970ms
+2023-01-13 11:04:14.489 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 178.7837ms
+2023-01-13 11:04:14.772 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/swagger/v1/swagger.json - -
+2023-01-13 11:04:15.006 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 233.1315ms
+2023-01-13 11:05:15.805 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 11:05:15.805 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 11:05:15.838 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:05:15.838 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:05:15.840 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 35.2964ms
+2023-01-13 11:05:15.840 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 35.4570ms
+2023-01-13 11:05:15.847 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 11:05:15.850 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:05:16.313 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 11:05:16.321 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 11:05:16.322 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 474.7571ms
+2023-01-13 11:05:16.356 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 11:05:16.356 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:05:16.357 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 11:05:16.358 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 11:05:16.358 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 1.9049ms
+2023-01-13 11:14:54.454 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 11:14:54.456 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 11:14:54.458 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:14:54.458 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:14:54.459 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 5.5941ms
+2023-01-13 11:14:54.459 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 4.2337ms
+2023-01-13 11:14:54.462 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 11:14:54.463 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:14:54.463 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 11:14:54.463 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 11:14:54.464 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 1.1507ms
+2023-01-13 11:14:54.465 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 11:14:54.465 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:14:54.465 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 11:14:54.465 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 11:14:54.465 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 0.6975ms
+2023-01-13 11:17:14.255 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 11:17:14.255 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 11:17:14.255 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:17:14.255 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:17:14.255 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.6557ms
+2023-01-13 11:17:14.255 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.7313ms
+2023-01-13 11:17:14.263 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 11:17:14.263 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:17:14.264 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 11:17:14.264 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 11:17:14.264 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 0.9198ms
+2023-01-13 11:17:14.268 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 11:17:14.268 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:17:14.268 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 11:17:14.268 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 11:17:14.269 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 0.9489ms
+2023-01-13 11:17:25.225 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 11:17:25.225 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 11:17:25.225 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:17:25.225 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:17:25.225 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.2613ms
+2023-01-13 11:17:25.225 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.6940ms
+2023-01-13 11:17:25.227 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 11:17:25.227 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:17:25.227 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 11:17:25.227 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 11:17:25.227 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 0.2997ms
+2023-01-13 11:17:25.228 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 11:17:25.228 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:17:25.228 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 11:17:25.228 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 11:17:25.229 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 0.9225ms
+2023-01-13 11:17:50.526 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 11:17:50.530 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:17:50.530 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 11:17:50.531 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:17:50.531 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 5.0071ms
+2023-01-13 11:17:50.531 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.3654ms
+2023-01-13 11:17:50.539 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 11:17:50.539 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:17:51.073 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 11:17:51.093 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 11:17:51.253 +02:00 [INF] Notes Request: GetCardListQuery "e3b2c02f-24f5-4e5f-9063-e2e62181c7d5" {"UserId":"e3b2c02f-24f5-4e5f-9063-e2e62181c7d5","$type":"GetCardListQuery"}
+2023-01-13 11:17:51.840 +02:00 [INF] Executed DbCommand (100ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-13 11:17:51.876 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-13 11:17:51.882 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 11:17:51.882 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:17:51.882 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 11:17:51.882 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 11:17:51.883 +02:00 [INF] Notes Request: GetCardListQuery "e3b2c02f-24f5-4e5f-9063-e2e62181c7d5" {"UserId":"e3b2c02f-24f5-4e5f-9063-e2e62181c7d5","$type":"GetCardListQuery"}
+2023-01-13 11:17:51.886 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 788.686ms
+2023-01-13 11:17:51.887 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 11:17:51.897 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 1358.1473ms
+2023-01-13 11:17:51.943 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-13 11:17:51.943 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-13 11:17:51.943 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 60.8501ms
+2023-01-13 11:17:51.943 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 11:17:51.944 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 62.1139ms
+2023-01-13 11:18:01.790 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 11:18:01.790 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:18:01.790 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.2184ms
+2023-01-13 11:18:01.792 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7112/api/Cards application/json 15
+2023-01-13 11:18:01.792 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:18:01.792 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi)'
+2023-01-13 11:18:01.805 +02:00 [INF] Route matched with {action = "Create", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Cards.WebApi.Models.CreateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 11:18:01.878 +02:00 [INF] Notes Request: CreateCardCommand "e3b2c02f-24f5-4e5f-9063-e2e62181c7d5" {"UserId":"e3b2c02f-24f5-4e5f-9063-e2e62181c7d5","Title":"bbb","Details":null,"$type":"CreateCardCommand"}
+2023-01-13 11:18:02.080 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 250), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cards] ([Id], [CreationDate], [Details], [EditDate], [Title], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-01-13 11:18:02.102 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-01-13 11:18:02.103 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi) in 298.5152ms
+2023-01-13 11:18:02.103 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi)'
+2023-01-13 11:18:02.103 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7112/api/Cards application/json 15 - 200 - application/json;+charset=utf-8 311.8290ms
+2023-01-13 11:18:02.307 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 11:18:02.308 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:18:02.309 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 11:18:02.309 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 11:18:02.313 +02:00 [INF] Notes Request: GetCardListQuery "e3b2c02f-24f5-4e5f-9063-e2e62181c7d5" {"UserId":"e3b2c02f-24f5-4e5f-9063-e2e62181c7d5","$type":"GetCardListQuery"}
+2023-01-13 11:18:02.327 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-13 11:18:02.335 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-13 11:18:02.338 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 28.6983ms
+2023-01-13 11:18:02.338 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 11:18:02.340 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 31.5255ms
+2023-01-13 11:18:03.486 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards/d73d899f-1acc-40f3-9591-a90ed93aae9e - -
+2023-01-13 11:18:03.486 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:18:03.486 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards/d73d899f-1acc-40f3-9591-a90ed93aae9e - - - 204 - - 0.2627ms
+2023-01-13 11:18:03.488 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7112/api/Cards/d73d899f-1acc-40f3-9591-a90ed93aae9e - -
+2023-01-13 11:18:03.488 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:18:03.489 +02:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2023-01-13 11:18:03.492 +02:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2023-01-13 11:18:03.492 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7112/api/Cards/d73d899f-1acc-40f3-9591-a90ed93aae9e - - - 403 0 - 4.3876ms
+2023-01-13 11:18:05.214 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7112/api/Cards/d73d899f-1acc-40f3-9591-a90ed93aae9e - -
+2023-01-13 11:18:05.214 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:18:05.214 +02:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2023-01-13 11:18:05.214 +02:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2023-01-13 11:18:05.214 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7112/api/Cards/d73d899f-1acc-40f3-9591-a90ed93aae9e - - - 403 0 - 0.5917ms
+2023-01-13 11:18:07.075 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 11:18:07.075 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:18:07.076 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 1.2581ms
+2023-01-13 11:18:07.080 +02:00 [INF] Request starting HTTP/2 PUT https://localhost:7112/api/Cards application/json 62
+2023-01-13 11:18:07.080 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:18:07.081 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-13 11:18:07.086 +02:00 [INF] Route matched with {action = "Update", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(Cards.WebApi.Models.UpdateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 11:18:07.138 +02:00 [INF] Notes Request: UpdateCardCommand "e3b2c02f-24f5-4e5f-9063-e2e62181c7d5" {"UserId":"e3b2c02f-24f5-4e5f-9063-e2e62181c7d5","Id":"d73d899f-1acc-40f3-9591-a90ed93aae9e","Title":"bbbasd","Details":null,"$type":"UpdateCardCommand"}
+2023-01-13 11:18:07.175 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreationDate], [c].[Details], [c].[EditDate], [c].[Title], [c].[UserId]
+FROM [Cards] AS [c]
+WHERE [c].[Id] = @__request_Id_0
+2023-01-13 11:18:07.214 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = DateTime2), @p1='?' (Size = 250)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Cards] SET [EditDate] = @p0, [Title] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2023-01-13 11:18:07.231 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-01-13 11:18:07.231 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi) in 144.8888ms
+2023-01-13 11:18:07.231 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Update (Cards.WebApi)'
+2023-01-13 11:18:07.231 +02:00 [INF] Request finished HTTP/2 PUT https://localhost:7112/api/Cards application/json 62 - 204 - - 150.9709ms
+2023-01-13 11:18:09.178 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 11:18:09.179 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:18:09.179 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 11:18:09.180 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 11:18:09.180 +02:00 [INF] Notes Request: GetCardListQuery "e3b2c02f-24f5-4e5f-9063-e2e62181c7d5" {"UserId":"e3b2c02f-24f5-4e5f-9063-e2e62181c7d5","$type":"GetCardListQuery"}
+2023-01-13 11:18:09.186 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-13 11:18:09.187 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-13 11:18:09.187 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 7.5974ms
+2023-01-13 11:18:09.187 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 11:18:09.188 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 9.5221ms
+2023-01-13 11:18:09.195 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 11:18:09.201 +02:00 [INF] CORS policy execution successful.
+2023-01-13 11:18:09.208 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 11:18:09.208 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 11:18:09.208 +02:00 [INF] Notes Request: GetCardListQuery "e3b2c02f-24f5-4e5f-9063-e2e62181c7d5" {"UserId":"e3b2c02f-24f5-4e5f-9063-e2e62181c7d5","$type":"GetCardListQuery"}
+2023-01-13 11:18:09.213 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-13 11:18:09.215 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-13 11:18:09.215 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 6.6336ms
+2023-01-13 11:18:09.215 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 11:18:09.215 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 20.1277ms
+2023-01-13 14:36:10.272 +02:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-01-13 14:36:10.429 +02:00 [INF] Executed DbCommand (85ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-01-13 14:36:10.611 +02:00 [INF] User profile is available. Using 'C:\Users\freez\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-13 14:36:10.951 +02:00 [INF] Now listening on: https://localhost:7112
+2023-01-13 14:36:10.951 +02:00 [INF] Now listening on: http://localhost:5088
+2023-01-13 14:36:11.660 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/ - -
+2023-01-13 14:36:11.788 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/ - - - 301 0 - 131.6573ms
+2023-01-13 14:36:11.798 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/index.html - -
+2023-01-13 14:36:12.061 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/index.html - - - 200 - text/html;charset=utf-8 263.3344ms
+2023-01-13 14:36:12.088 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/swagger-ui-bundle.js - -
+2023-01-13 14:36:12.088 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/swagger-ui-standalone-preset.js - -
+2023-01-13 14:36:12.088 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/_framework/aspnetcore-browser-refresh.js - -
+2023-01-13 14:36:12.091 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/_framework/aspnetcore-browser-refresh.js - - - 200 11994 application/javascript;+charset=utf-8 3.2902ms
+2023-01-13 14:36:12.098 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/swagger-ui.css - -
+2023-01-13 14:36:12.104 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/_vs/browserLink - -
+2023-01-13 14:36:12.161 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-01-13 14:36:12.162 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/swagger-ui.css - - - 200 143943 text/css 63.6088ms
+2023-01-13 14:36:12.163 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-01-13 14:36:12.164 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/swagger-ui-standalone-preset.js - - - 200 339486 application/javascript 75.8833ms
+2023-01-13 14:36:12.197 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-01-13 14:36:12.198 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/swagger-ui-bundle.js - - - 200 1096145 application/javascript 109.9596ms
+2023-01-13 14:36:12.236 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 131.2248ms
+2023-01-13 14:36:12.477 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/swagger/v1/swagger.json - -
+2023-01-13 14:36:12.643 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 165.7100ms
+2023-01-13 14:36:43.570 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 14:36:43.570 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 14:36:43.594 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:36:43.594 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:36:43.596 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 26.6879ms
+2023-01-13 14:36:43.596 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 26.7007ms
+2023-01-13 14:36:43.598 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:36:43.599 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:36:43.990 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 14:36:43.996 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 14:36:43.996 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 398.2186ms
+2023-01-13 14:36:43.998 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:36:43.998 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:36:44.006 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 14:36:44.006 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 14:36:44.006 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 8.5621ms
+2023-01-13 14:37:00.728 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 14:37:00.729 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 14:37:00.729 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:00.729 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:00.729 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.7093ms
+2023-01-13 14:37:00.729 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.1747ms
+2023-01-13 14:37:00.734 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:37:00.735 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:01.260 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 14:37:01.279 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 14:37:01.446 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-13 14:37:02.027 +02:00 [INF] Executed DbCommand (84ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-13 14:37:02.071 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-13 14:37:02.077 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:37:02.077 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:02.078 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 14:37:02.078 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 14:37:02.079 +02:00 [INF] Notes Request: GetCardListQuery "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"GetCardListQuery"}
+2023-01-13 14:37:02.082 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 798.1419ms
+2023-01-13 14:37:02.084 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 14:37:02.097 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 1363.4096ms
+2023-01-13 14:37:02.152 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-13 14:37:02.153 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-13 14:37:02.153 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 74.8862ms
+2023-01-13 14:37:02.153 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 14:37:02.153 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 76.3272ms
+2023-01-13 14:37:04.572 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards/6d31bf57-9c58-440d-8c55-4fbd3ff4df4e - -
+2023-01-13 14:37:04.572 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:04.572 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards/6d31bf57-9c58-440d-8c55-4fbd3ff4df4e - - - 204 - - 0.2519ms
+2023-01-13 14:37:04.573 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7112/api/Cards/6d31bf57-9c58-440d-8c55-4fbd3ff4df4e - -
+2023-01-13 14:37:04.574 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:04.574 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Delete (Cards.WebApi)'
+2023-01-13 14:37:04.597 +02:00 [INF] Route matched with {action = "Delete", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(System.Guid) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 14:37:04.630 +02:00 [INF] Notes Request: DeleteCardCommand "bef1e56d-b0f7-49de-92ab-990b6b84c386" {"Id":"6d31bf57-9c58-440d-8c55-4fbd3ff4df4e","UserId":"bef1e56d-b0f7-49de-92ab-990b6b84c386","$type":"DeleteCardCommand"}
+2023-01-13 14:37:04.750 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CreationDate], [c].[Details], [c].[EditDate], [c].[Title], [c].[UserId]
+FROM [Cards] AS [c]
+WHERE [c].[Id] = @__get_Item_0
+2023-01-13 14:37:04.948 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Cards]
+OUTPUT 1
+WHERE [Id] = @p0;
+2023-01-13 14:37:04.987 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-01-13 14:37:04.987 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Delete (Cards.WebApi) in 389.4377ms
+2023-01-13 14:37:04.987 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Delete (Cards.WebApi)'
+2023-01-13 14:37:04.987 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7112/api/Cards/6d31bf57-9c58-440d-8c55-4fbd3ff4df4e - - - 204 - - 413.5655ms
+2023-01-13 14:37:37.189 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 14:37:37.188 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 14:37:37.189 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:37.189 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:37.189 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.2256ms
+2023-01-13 14:37:37.189 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.3966ms
+2023-01-13 14:37:37.190 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:37:37.191 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:37.193 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-01-13 14:37:37.222 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2023-01-13 14:37:37.223 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 14:37:37.224 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 14:37:37.224 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 34.0848ms
+2023-01-13 14:37:37.228 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:37:37.229 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:37.229 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-01-13 14:37:37.230 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2023-01-13 14:37:37.230 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 14:37:37.230 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 14:37:37.230 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 1.5024ms
+2023-01-13 14:37:37.600 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:37:37.600 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:37.601 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-01-13 14:37:37.601 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2023-01-13 14:37:37.601 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 14:37:37.601 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 14:37:37.601 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 1.4431ms
+2023-01-13 14:37:37.606 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:37:37.607 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:37.607 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-01-13 14:37:37.608 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2023-01-13 14:37:37.608 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 14:37:37.608 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 14:37:37.608 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 1.7522ms
+2023-01-13 14:37:42.818 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 14:37:42.818 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:42.818 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.2577ms
+2023-01-13 14:37:42.820 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7112/api/Cards application/json 17
+2023-01-13 14:37:42.821 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:42.821 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-01-13 14:37:42.822 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2023-01-13 14:37:42.822 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 14:37:42.822 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 14:37:42.822 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7112/api/Cards application/json 17 - 401 0 - 1.7253ms
+2023-01-13 14:37:43.343 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:37:43.343 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:43.345 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-01-13 14:37:43.345 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2023-01-13 14:37:43.346 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 14:37:43.346 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 14:37:43.346 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 3.0570ms
+2023-01-13 14:37:48.424 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 14:37:48.424 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:48.424 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.5283ms
+2023-01-13 14:37:48.424 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 14:37:48.424 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:48.425 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.2353ms
+2023-01-13 14:37:48.426 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:37:48.426 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:48.427 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 14:37:48.427 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 14:37:48.429 +02:00 [INF] Notes Request: GetCardListQuery "a11dc47f-3e89-4b0d-a4ba-f75452edee0e" {"UserId":"a11dc47f-3e89-4b0d-a4ba-f75452edee0e","$type":"GetCardListQuery"}
+2023-01-13 14:37:48.438 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-13 14:37:48.438 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-13 14:37:48.439 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 11.5526ms
+2023-01-13 14:37:48.439 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 14:37:48.439 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 12.4236ms
+2023-01-13 14:37:48.445 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:37:48.445 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:48.445 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 14:37:48.445 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 14:37:48.445 +02:00 [INF] Notes Request: GetCardListQuery "a11dc47f-3e89-4b0d-a4ba-f75452edee0e" {"UserId":"a11dc47f-3e89-4b0d-a4ba-f75452edee0e","$type":"GetCardListQuery"}
+2023-01-13 14:37:48.448 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-13 14:37:48.449 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-13 14:37:48.449 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 3.6155ms
+2023-01-13 14:37:48.449 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 14:37:48.449 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 4.3951ms
+2023-01-13 14:37:50.977 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 14:37:50.977 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:50.977 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.2425ms
+2023-01-13 14:37:50.979 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7112/api/Cards application/json 17
+2023-01-13 14:37:50.979 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:50.979 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi)'
+2023-01-13 14:37:50.982 +02:00 [INF] Route matched with {action = "Create", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Cards.WebApi.Models.CreateCardDto) on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 14:37:51.046 +02:00 [INF] Notes Request: CreateCardCommand "a11dc47f-3e89-4b0d-a4ba-f75452edee0e" {"UserId":"a11dc47f-3e89-4b0d-a4ba-f75452edee0e","Title":"anton","Details":null,"$type":"CreateCardCommand"}
+2023-01-13 14:37:51.088 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 250), @p5='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Cards] ([Id], [CreationDate], [Details], [EditDate], [Title], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-01-13 14:37:51.097 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-01-13 14:37:51.098 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi) in 116.4086ms
+2023-01-13 14:37:51.098 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.Create (Cards.WebApi)'
+2023-01-13 14:37:51.098 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7112/api/Cards application/json 17 - 200 - application/json;+charset=utf-8 119.7611ms
+2023-01-13 14:37:51.482 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:37:51.482 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:51.483 +02:00 [INF] Executing endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 14:37:51.483 +02:00 [INF] Route matched with {action = "GetAll", controller = "Cards"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Cards.Application.Cards.Queries.GetCardList.CardListVm]] GetAll() on controller Cards.WebApi.Controllers.CardsController (Cards.WebApi).
+2023-01-13 14:37:51.483 +02:00 [INF] Notes Request: GetCardListQuery "a11dc47f-3e89-4b0d-a4ba-f75452edee0e" {"UserId":"a11dc47f-3e89-4b0d-a4ba-f75452edee0e","$type":"GetCardListQuery"}
+2023-01-13 14:37:51.485 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_UserId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Title]
+FROM [Cards] AS [c]
+WHERE [c].[UserId] = @__request_UserId_0
+2023-01-13 14:37:51.487 +02:00 [INF] Executing OkObjectResult, writing value of type 'Cards.Application.Cards.Queries.GetCardList.CardListVm'.
+2023-01-13 14:37:51.487 +02:00 [INF] Executed action Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi) in 4.2177ms
+2023-01-13 14:37:51.487 +02:00 [INF] Executed endpoint 'Cards.WebApi.Controllers.CardsController.GetAll (Cards.WebApi)'
+2023-01-13 14:37:51.487 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 200 - application/json;+charset=utf-8 5.2714ms
+2023-01-13 14:37:52.546 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards/d946afd6-1130-420f-afd1-369aa7614728 - -
+2023-01-13 14:37:52.546 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:52.546 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards/d946afd6-1130-420f-afd1-369aa7614728 - - - 204 - - 0.2334ms
+2023-01-13 14:37:52.548 +02:00 [INF] Request starting HTTP/2 DELETE https://localhost:7112/api/Cards/d946afd6-1130-420f-afd1-369aa7614728 - -
+2023-01-13 14:37:52.548 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:37:52.548 +02:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2023-01-13 14:37:52.551 +02:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2023-01-13 14:37:52.551 +02:00 [INF] Request finished HTTP/2 DELETE https://localhost:7112/api/Cards/d946afd6-1130-420f-afd1-369aa7614728 - - - 403 0 - 3.2760ms
+2023-01-13 14:40:47.285 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 14:40:47.285 +02:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7112/api/Cards - -
+2023-01-13 14:40:47.285 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:40:47.285 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:40:47.285 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.3142ms
+2023-01-13 14:40:47.285 +02:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7112/api/Cards - - - 204 - - 0.3791ms
+2023-01-13 14:40:47.291 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:40:47.291 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:40:47.292 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 14:40:47.292 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 14:40:47.292 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 1.0467ms
+2023-01-13 14:40:47.295 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7112/api/Cards - -
+2023-01-13 14:40:47.295 +02:00 [INF] CORS policy execution successful.
+2023-01-13 14:40:47.295 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-01-13 14:40:47.295 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-01-13 14:40:47.296 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7112/api/Cards - - - 401 0 - 0.4886ms
